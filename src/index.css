@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Default dark theme */
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.light {
+  background: radial-gradient(circle at top, #f0f9ff, #f0f9ff);
+  color: #1f2937;
+}
+
+.dark {
+  background: radial-gradient(circle at top, #020617, #020617);
+  color: #e5e7eb;
+}
+
+.section-divider {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #22d3ee, transparent);
+  margin: 2rem auto;
+}
