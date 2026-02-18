@@ -59,7 +59,7 @@ export const projects = [
     "Vite",
     "Responsive Design"
   ],
-  github: "https://github.com/your-username/portfolio",
+  github: "https://github.com/Kalyanideshpande27/portfolio",
   live: "https://your-portfolio-link.com"
 }
 

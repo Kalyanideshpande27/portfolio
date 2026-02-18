@@ -45,7 +45,7 @@ const Hero = ({ theme }) => {
 
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 items-center gap-12 relative z-10">
 
-        <div className="absolute top-4 -left-10 z-20">
+        <div className="absolute top-1 -left-10 z-20">
           <div className="flex items-center gap-2 px-4 py-1.5 bg-cyan-500/90 text-black text-sm font-semibold rounded-full shadow-lg shadow-cyan-500/30 animate-pulse">
             <span className={`w-2 h-2 rounded-full ${isDark ? "bg-black" : "bg-white"}`}></span>
             Open to Work
