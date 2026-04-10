@@ -12,7 +12,15 @@ const Background = ({ theme }) => {
     <Particles
       init={init}
       options={{
-        background: { color: isDark ? "#020617" : "#f3f4f6" },
+        fullScreen: { 
+          enable: false,
+          zIndex: -1
+        },
+        background: { 
+          color: isDark ? "#020617" : "#f3f4f6",
+          position: "fixed",
+          zIndex: -10
+        },
         particles: {
           number: { value: 60 },
           color: { value: "#22d3ee" },
@@ -24,9 +32,11 @@ const Background = ({ theme }) => {
             color: "#22d3ee",
             opacity: 0.15
           }
-        }
+        },
+        detectRetina: true,
+        smooth: true
       }}
-      className="fixed inset-0 -z-10"
+      className="fixed inset-0 pointer-events-none -z-10 w-screen h-screen"
     />
   );
 };

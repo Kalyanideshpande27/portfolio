@@ -55,15 +55,17 @@ const skillCategories = [
   },
 ];
 
-const Skills = () => {
+const Skills = ({ theme }) => {
+  const isDark = theme === "dark";
+
   return (
     <section
       id="skills"
-      className="relative py-15 pt-1 px-6 bg-gradient-to-b from-black via-gray-950 to-black overflow-hidden"
+      className={`relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${isDark ? 'bg-gradient-to-b from-black via-gray-950 to-black' : 'bg-gradient-to-b from-slate-50 via-gray-100 to-slate-100'}`}
     >
       {/* Background Glow */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/20 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/20 blur-3xl rounded-full md:block hidden lg:block"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full md:block hidden lg:block"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-4xl font-bold text-center mb-16">
@@ -80,9 +82,9 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-cyan-400/30 transition duration-300"
+              className={`backdrop-blur-xl border rounded-2xl p-6 md:p-8 hover:border-cyan-400/30 transition duration-300 ${isDark ? 'bg-white/5 border-white/10 text-gray-300' : 'bg-white/90 border-gray-200/50 text-gray-800'}`}
             >
-              <h3 className="text-xl font-semibold text-cyan-400 mb-6">
+              <h3 className={`text-xl font-semibold mb-6 ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`}>
                 {category.title}
               </h3>
 
@@ -90,10 +92,10 @@ const Skills = () => {
                 {category.skills.map((skill, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 px-4 py-2 text-sm rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500 hover:text-black transition duration-300"
+                    className={`flex items-center gap-2 px-4 py-2 text-sm rounded-full border transition duration-300 ${isDark ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-300 hover:bg-cyan-500 hover:text-black' : 'bg-cyan-100 border-cyan-300/50 text-cyan-700 hover:bg-cyan-500 hover:text-white'}`}
                   >
                     {skill.icon && (
-                      <span className="text-base text-cyan-400/80">
+                      <span className={`text-base ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`}>
                         {skill.icon}
                       </span>
                     )}
@@ -110,3 +112,4 @@ const Skills = () => {
 };
 
 export default Skills;
+

@@ -28,7 +28,7 @@ export const projects = [
       "JWT",
       "Dashboard"
     ],
-    github: "https://github.com/your-username/codenova",
+    github: "https://github.com/Kalyanideshpande27/CodeNova",
     live: null
   }, 
   {
@@ -44,8 +44,8 @@ export const projects = [
     "JWT",
     "Google Maps API"
   ],
-  github: "https://github.com/your-username/nourish-together",
-  live: null
+  github: "https://github.com/Kalyanideshpande27/Nourish-Together",
+    live: "https://nourish-together-chi.vercel.app"
 }, 
 {
   title: "Personal Portfolio",

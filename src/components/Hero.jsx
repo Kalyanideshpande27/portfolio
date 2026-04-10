@@ -45,17 +45,12 @@ const Hero = ({ theme }) => {
 
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 items-center gap-12 relative z-10">
 
-        <div className="absolute top-1 -left-10 z-20">
-          <div className="flex items-center gap-2 px-4 py-1.5 bg-cyan-500/90 text-black text-sm font-semibold rounded-full shadow-lg shadow-cyan-500/30 animate-pulse">
-            <span className={`w-2 h-2 rounded-full ${isDark ? "bg-black" : "bg-white"}`}></span>
-            Open to Work
-          </div>
-        </div>
+       
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex justify-center"
+          className="flex justify-center mt-30 md:mt-0"
         >
           <div className="relative">
 
@@ -79,9 +74,7 @@ const Hero = ({ theme }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-cyan-400 font-medium mb-1 tracking-wider">
-            B.Tech CSE Student
-          </p>
+
 
           <h1 className={`text-5xl md:text-6xl font-extrabold leading-tight ${isDark ? "text-white" : "text-gray-900"}`}>
             Hi, I'm{" "}
@@ -106,7 +99,7 @@ const Hero = ({ theme }) => {
           </p>
 
           {/* Social Links */}
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex items-center gap-4 flex-wrap">
             <a
               href="https://github.com/Kalyanideshpande27"
               target="_blank"
@@ -130,6 +123,9 @@ const Hero = ({ theme }) => {
             >
               <Mail size={20} />
             </a>
+            <span className="px-3 py-1 text-sm bg-cyan-500 text-black rounded-full shadow-md shadow-cyan-500/30 animate-pulse">
+              Open for Roles
+            </span>
           </div>
 
           {/* CTA Buttons */}
@@ -139,7 +135,7 @@ const Hero = ({ theme }) => {
               className="px-8 py-3 bg-cyan-500 text-black rounded-xl font-semibold
                          hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/40 transition duration-300"
             >
-              View Projects
+              Explore Build
             </a>
             <a
               href="resume/resume.pdf"
