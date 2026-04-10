@@ -179,25 +179,6 @@ const Hero = ({ theme }) => {
         </motion.div>
       </div>
 
-      {/* SCROLL INDICATOR */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2"
-      >
-        <motion.a
-          href="#about"
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className={`flex flex-col items-center gap-1 ${
-            isDark ? "text-gray-500" : "text-gray-400"
-          }`}
-        >
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <ChevronDown size={18} />
-        </motion.a>
-      </motion.div>
     </section>
   );
 };
