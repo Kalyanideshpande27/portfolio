@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMobileOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <nav
@@ -84,6 +95,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
       {/* Mobile Menu */}
       <div
+        ref={menuRef}
         className={`md:hidden transition-all duration-300 overflow-hidden w-full ${
           isMobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
