@@ -44,7 +44,7 @@ const EducationAchievements = ({ theme }) => {
                 {
                   title: "Bachelor of Technology – Computer Science Engineering",
                   score: "CGPA: 7.14",
-                  year: "2023 – 2026",
+                  year: "2022 – 2026",
                   desc: "Focused on full-stack development, scalable systems, and cloud technologies.",
                 },
                 {
